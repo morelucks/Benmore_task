@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>task list</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Task List{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-5">Task List</h1>
+<div class="bg-white p-5 rounded shadow-md">
+    <a href="{% url 'task_create' %}" class="mb-3 inline-block bg-blue-500 text-white py-2 px-4 rounded">Add Task</a>
+    <ul>
+        {% for task in tasks %}
+            <li class="mb-2 p-2 border-b">
+                <a href="{% url 'task_detail' task.pk %}" class="text-blue-500">{{ task.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
