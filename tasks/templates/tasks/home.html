@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="flex w-full">
+    <!-- Sidebar (1/5) -->
+    <div class="w-1/5 bg-blue-900 p-5 text-white">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold">Tasky</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="mb-4"><a href="#" class="block py-2 px-4 rounded hover:bg-blue-700">Dashboard</a></li>
+                <li class="mb-4"><a href="#" class="block py-2 px-4 rounded hover:bg-blue-700">Tasks</a></li>
+                <li class="mb-4"><a href="#" class="block py-2 px-4 rounded hover:bg-blue-700">Calendar</a></li>
+                <li class="mb-4"><a href="#" class="block py-2 px-4 rounded hover:bg-blue-700">Members</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content (4/5) -->
+    <div class="w-4/5 p-6">
+        <div class="flex justify-between mb-6">
+            <input type="text" placeholder="Search tasks" class="w-2/6 p-3 rounded border border-gray-300">
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-6 10h.01M4 6h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" /></svg>
+                </button>
+                <button class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 7.165 6 9.388 6 12v2.159c0 .538-.214 1.055-.595 1.436L4 17h5m5 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+                </button>
+                <button class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 7l6.5-3.5L12 14l-6.5 3.5L12 21z" /></svg>
+                </button>
+                <img src="avatar.jpg" alt="User Avatar" class="w-8 h-8 rounded-full">
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-6">
+            <!-- In Progress Column -->
+            <div>
+                <h2 class="text-xl font-semibold mb-4">In Progress</h2>
+                <div class="bg-white p-4 rounded shadow-md mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">High</span>
+                        <span class="text-xs">6:00 PM</span>
+                        <span class="text-xs">UX Design</span>
+                    </div>
+                    <h3 class="text-lg font-bold">User Flow</h3>
+                    <p class="text-sm text-gray-600">Designing a dashboard involves creating a visual interface that...</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <div class="flex">
+                            <img src="avatar1.jpg" class="w-6 h-6 rounded-full" alt="avatar">
+                            <img src="avatar2.jpg" class="w-6 h-6 rounded-full -ml-2" alt="avatar">
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            </button>
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-4 4L5 7" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Task Column -->
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Completed Task</h2>
+                <div class="bg-white p-4 rounded shadow-md mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">High</span>
+                        <span class="text-xs">6:00 PM</span>
+                        <span class="text-xs">UX Design</span>
+                    </div>
+                    <h3 class="text-lg font-bold">User Flow</h3>
+                    <p class="text-sm text-gray-600">Designing a dashboard involves creating a visual interface that...</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <div class="flex">
+                            <img src="avatar1.jpg" class="w-6 h-6 rounded-full" alt="avatar">
+                            <img src="avatar2.jpg" class="w-6 h-6 rounded-full -ml-2" alt="avatar">
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            </button>
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-4 4L5 7" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Over-Due Column -->
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Over-Due</h2>
+                <div class="bg-white p-4 rounded shadow-md mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">High</span>
+                        <span class="text-xs">22/08/23</span>
+                        <span class="text-xs">UX Design</span>
+                    </div>
+                    <h3 class="text-lg font-bold">User Flow</h3>
+                    <p class="text-sm text-gray-600">Designing a dashboard involves creating a visual interface that...</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <div class="flex">
+                            <img src="avatar1.jpg" class="w-6 h-6 rounded-full" alt="avatar">
+                            <img src="avatar2.jpg" class="w-6 h-6 rounded-full -ml-2" alt="avatar">
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            </button>
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-4 4L5 7" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

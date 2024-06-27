@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from .models import Task
 from .forms import TaskForm
 
+def home(request):
+    return render(request, 'tasks/home.html')
 def task_list(request):
     tasks = Task.objects.all()
     return render(request, 'tasks/task_list.html', {'tasks': tasks})
